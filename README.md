@@ -6,4 +6,4 @@
 - [x] 配置文件高自定义性
 - [x] 异步执行推送/刷新动作,对服务器影响甚小
 
-> ❗对于1.13.x及更低版本的服务器,您必须额外安装 (ProtocolLib)[https://www.spigotmc.org/resources/protocollib.1997/]
+> ❗对于1.13.x及更低版本的服务器,您必须额外安装 [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/)
