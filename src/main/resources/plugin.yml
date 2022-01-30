@@ -1,0 +1,14 @@
+name: KarixTab
+version: '${project.version}'
+main: com.github.azurehanchen.KarixTab
+api-version: 1.17
+softdepend: [ ProtocolLib, PlaceholderAPI ]
+authors: [ AzureHanChen ]
+description: Change your tablist easily!
+website: karixtab.azurehanchen.top
+commands:
+  karixtab:
+    aliases:
+      - kt
+      - ktab
+      - tab

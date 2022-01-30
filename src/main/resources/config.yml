@@ -1,0 +1,32 @@
+#除了使用PlaceholderAPI提供的变量外,
+#您可以使用#player#来代替玩家名称
+ConfigVersion: "1"
+#配置文件版本标识符,请勿修改
+Plugin:
+  CheckUpdate: true
+  #是否检查更新
+  Metrics: true
+  #是否开启统计
+Tab:
+  Enable: true
+  Content: "#player#"
+  #玩家在Tab列表中所显示的名字
+  Refresh:
+    Enable: true
+    #是否开启刷新
+    Cooldown: 20
+    #单位为TICKS,20 TICKS = 1秒
+Tablist:
+  Enable: true
+  Header: |-
+    &e
+    &e欢迎您,#player#
+    &e
+  Footer: |-
+    &e
+    &eMCBBS@AzureHanChen
+    &e
+  Refresh:
+    Enable: true
+    Cooldown: 20
+
