@@ -22,7 +22,11 @@ public class MainCommand implements CommandExecutor {
     else if (args.length == 1 && args[0].equalsIgnoreCase("reload") ){
         sender.sendMessage(format(Messages.PREFIX.getMessage()+"&f插件正在重载中..."));
         try {
+            long startTime = System.currentTimeMillis();
             ConfigManager.reload();
+            long endTime = System.currentTimeMillis();
+            long reloadTime = endTime - startTime;
+            sender.sendMessage(format(Messages.PREFIX.getMessage()+"&f插件在&e"+reloadTime+"ms&f内重置完毕&a√"));
         }catch (Exception ex){
             CommonUtils.ConsoleLog(Messages.PREFIX.getMessage()+Messages.FATAL_ERROR);
             sender.sendMessage(Messages.PREFIX.getMessage()+Messages.FATAL_ERROR);

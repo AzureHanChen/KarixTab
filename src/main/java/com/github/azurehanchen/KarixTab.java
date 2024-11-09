@@ -3,6 +3,7 @@ package com.github.azurehanchen;
 import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.ProtocolManager;
 import com.github.azurehanchen.Commands.MainCommand;
+import com.github.azurehanchen.Commands.TabCompleters;
 import com.github.azurehanchen.Configuration.ConfigManager;
 import com.github.azurehanchen.Listeners.PlayerListener;
 import com.github.azurehanchen.Utils.CommonUtils;
@@ -53,6 +54,7 @@ public final class KarixTab extends JavaPlugin {
         ConfigManager.reload();
         Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
         Bukkit.getPluginCommand("karixtab").setExecutor(new MainCommand());
+        getCommand("karixtab").setTabCompleter(new TabCompleters());
         CommonUtils.ConsoleLog(" &6*** &fKarixTab已加载");
     }
 

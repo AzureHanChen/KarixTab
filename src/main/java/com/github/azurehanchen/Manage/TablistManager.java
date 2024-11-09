@@ -11,14 +11,18 @@ import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
+import java.util.List;
+
 public class TablistManager {
 
     private static ProtocolManager protocolManager = KarixTab.getPM();
 
     public static void sendTablist(Player p){
-        String header = CommonUtils.format((String) ConfigManager.getMap().get("Tablist_Header")).replaceAll("#player#",p.getName());
+        String header = String.join("\n", (List<String>) ConfigManager.getMap().get("Tablist_Header"));
+        String footer = String.join("\n", (List<String>) ConfigManager.getMap().get("Tablist_Footer"));
+        header = CommonUtils.format(header.replaceAll("#player#",p.getName()));
         header = PlaceholderAPI.setPlaceholders(p, header);
-        String footer = CommonUtils.format((String) ConfigManager.getMap().get("Tablist_Footer")).replaceAll("#player#",p.getName());
+        footer = CommonUtils.format(footer.replaceAll("#player#",p.getName()));
         footer = PlaceholderAPI.setPlaceholders(p, footer);
         if (!(KarixTab.getKT().MC_VERSION > 113)){
             PacketContainer pc = protocolManager.createPacket(PacketType.Play.Server.PLAYER_LIST_HEADER_FOOTER);

@@ -18,14 +18,14 @@ Tab:
     #单位为TICKS,20 TICKS = 1秒
 Tablist:
   Enable: true
-  Header: |-
-    &e
-    &e欢迎您,#player#
-    &e
-  Footer: |-
-    &e
-    &eMCBBS@AzureHanChen
-    &e
+  Header:
+    - ""
+    - "欢迎使用KarixTab"
+    - ""
+  Footer:
+    - ""
+    - "Author@AzureHanChen"
+    - ""
   Refresh:
     Enable: true
     Cooldown: 20

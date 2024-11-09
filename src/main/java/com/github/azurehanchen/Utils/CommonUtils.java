@@ -15,5 +15,10 @@ public class CommonUtils {
     public static String format(String text) {
         return ChatColor.translateAlternateColorCodes('&', text);
     }
+    public static String formatTime(long timeInMillis) {
+        long seconds = timeInMillis / 1000;
+        long milliseconds = timeInMillis % 1000;
+        return seconds + "." + String.format("%03d", milliseconds) + " 秒";
+    }
 
 }

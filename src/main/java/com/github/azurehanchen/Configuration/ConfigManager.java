@@ -27,8 +27,8 @@ public class ConfigManager {
             Values.put("Tab_Refresh",config.getBoolean("Tab.Refresh.Enable"));
             Values.put("Tab_Refresh_CD",config.getLong("Tab.Refresh.Cooldown"));
             Values.put("Tablist_Enable",config.getBoolean("Tablist.Enable"));
-            Values.put("Tablist_Header",config.getString("Tablist.Header"));
-            Values.put("Tablist_Footer",config.getString("Tablist.Footer"));
+            Values.put("Tablist_Header",config.getStringList("Tablist.Header"));
+            Values.put("Tablist_Footer",config.getStringList("Tablist.Footer"));
             Values.put("Tablist_Refresh",config.getBoolean("Tablist.Refresh.Enable"));
             Values.put("Tablist_Refresh_CD",config.getLong("Tablist.Refresh.Cooldown"));
         }
